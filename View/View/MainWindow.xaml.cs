@@ -22,11 +22,13 @@ namespace View
     {
         public MainWindow()
         {
-            InitializeComponent();         
+            InitializeComponent();
+            
         }
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
+            frame.Visibility = Visibility.Visible;
             allUsers.Visibility = Visibility.Hidden;
             allUsers.IsEnabled = false;
             add.Visibility = Visibility.Hidden;
@@ -42,7 +44,33 @@ namespace View
             allUsers.IsEnabled = true;
             add.Visibility = Visibility.Visible;
             add.IsEnabled = true;
-            back.Visibility = Visibility.Hidden;     
+            back.Visibility = Visibility.Hidden;          
+        }
+
+        private void add_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            add.Foreground = (Brush)bc.ConvertFrom("#222831");
+        }
+
+        private void add_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            add.Foreground = (Brush)bc.ConvertFrom("#FFEEEEEE");
+            add.Background = (Brush)bc.ConvertFrom("#222831");
+        }
+
+        private void back_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            add.Foreground = (Brush)bc.ConvertFrom("#222831");
+        }
+
+        private void back_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            add.Foreground = (Brush)bc.ConvertFrom("#FFEEEEEE");
+            add.Background = (Brush)bc.ConvertFrom("#222831");
         }
     }
 }
