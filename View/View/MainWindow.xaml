@@ -5,21 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="900">
+        Title="" Height="550" Width="900">
     <Window.Background>
         <ImageBrush ImageSource="C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\bin\back.jpg" />
     </Window.Background>
     <Grid>
         <Label Content="ФИТНЕС-ЦЕНТР" HorizontalAlignment="Left" 
                VerticalAlignment="Top" Height="51" Width="332" FontSize="28" Margin="54,0,0,0" 
-               FontFamily="Yu Gothic Medium" FontWeight="Bold">
+               FontFamily="Yu Gothic Medium" FontWeight="Bold" Grid.ColumnSpan="2">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#222831" Offset="1"/>
-                    <GradientStop Color="#EEEEEE"/>
+                    <GradientStop Color="#FF00ADB5"/>
                 </LinearGradientBrush>
             </Label.Foreground>
+            <Label.Effect>
+                <DropShadowEffect Color="#FF00ADB5" Direction="360" ShadowDepth="4" Opacity="0.4"/>
+            </Label.Effect>
         </Label>
-        <Frame HorizontalAlignment="Left" Height="463" Margin="0,56,0,0" VerticalAlignment="Top" Width="722"/>
+        <Frame x:Name="frame" HorizontalAlignment="Left" Height="463" Margin="0,56,0,0" VerticalAlignment="Top" Width="722"/>
+
+        <DataGrid x:Name="allUsers" HorizontalAlignment="Left" Height="380" Margin="54,104,0,0" 
+                  VerticalAlignment="Top" Width="350" BorderBrush="#393E46" FontSize="14" Opacity="0.7" Background="#FF00ADB5">
+            <DataGrid.Effect>
+                <DropShadowEffect Color="Black" Direction="330" ShadowDepth="8" Opacity="0.4"/>
+            </DataGrid.Effect>
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#393E46"/>
+                    <Setter Property="Foreground" Value="#EEEEEE" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="FontFamily" Value="Tahoma" />
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=name}" ClipboardContentBinding="{x:Null}" Header="Имя" CanUserResize="False" Width="200"/>
+                <DataGridTextColumn Binding="{Binding Path=card}" ClipboardContentBinding="{x:Null}" Header="Номер карты" CanUserResize="False" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="add" Content="Добавить нового пользователя" HorizontalAlignment="Left" Margin="464,431,0,0" VerticalAlignment="Top" Width="204" Height="30" Click="add_Click"/>
+        <Button x:Name="back" Content="Назад" HorizontalAlignment="Left" Margin="750,431,0,0" VerticalAlignment="Top" Width="76" Click="back_Click" Visibility="Hidden"/>
     </Grid>
 </Window>

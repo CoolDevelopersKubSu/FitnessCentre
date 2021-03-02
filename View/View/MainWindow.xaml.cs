@@ -22,7 +22,27 @@ namespace View
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();         
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            allUsers.Visibility = Visibility.Hidden;
+            allUsers.IsEnabled = false;
+            add.Visibility = Visibility.Hidden;
+            add.IsEnabled = false;
+            back.Visibility = Visibility.Visible;
+            frame.Navigate(new Add());
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {          
+            frame.Visibility = Visibility.Hidden;
+            allUsers.Visibility = Visibility.Visible;
+            allUsers.IsEnabled = true;
+            add.Visibility = Visibility.Visible;
+            add.IsEnabled = true;
+            back.Visibility = Visibility.Hidden;     
         }
     }
 }
