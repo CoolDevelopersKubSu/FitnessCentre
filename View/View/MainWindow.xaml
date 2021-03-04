@@ -33,7 +33,7 @@
         </Label>
         <Frame x:Name="frame" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="463" Margin="0,56,0,0" VerticalAlignment="Top" Width="722"/>
 
-        <DataGrid x:Name="allUsers" HorizontalAlignment="Left" Height="380" Margin="54,104,0,0" 
+        <DataGrid x:Name="allUsers_table" HorizontalAlignment="Left" Height="380" Margin="54,104,0,0" 
                   VerticalAlignment="Top" Width="350" BorderBrush="#393E46" FontSize="14" Opacity="0.7" Background="#FF00ADB5">
             <DataGrid.Effect>
                 <DropShadowEffect Color="Black" Direction="330" ShadowDepth="8" Opacity="0.4"/>
