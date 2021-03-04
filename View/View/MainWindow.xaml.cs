@@ -28,14 +28,11 @@ namespace View
         }
         public void ShowUsers()
         {
-            //string[][] records = new string[1][];
-            //records[0] = new string[] { "id", "name", "dfdf", "652143" };
             List<string[]> records = UserController.Users();
             for (int i=0; i<records.Count; i++)
             {
                 allUsers_table.Items.Add(new columnName()
                 {
-
                     name = records[i][0] + " " + records[i][1],
                     card = records[i][2],
                 }); 
