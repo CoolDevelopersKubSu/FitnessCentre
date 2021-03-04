@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="" Height="550" Width="900">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\Илья\Documents\GitHub\FitnessCentre\View\View\Resources\back.jpg" />
+        <ImageBrush ImageSource="Resources/back.jpg" />
     </Window.Background>
     <Window.Resources>
         <Style TargetType="Button">
