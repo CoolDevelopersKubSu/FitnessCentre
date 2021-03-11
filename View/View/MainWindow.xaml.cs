@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FitnessCenter;
 using Test;
 
 namespace View
@@ -28,15 +29,14 @@ namespace View
         }
         public void ShowUsers()
         {
-            string[][] records = new string[1][];
-            records[0] = new string[] { "id", "name", "dfdf", "652143" };
-            for (int i=0; i<records.Length; i++)
+            List<UserModel> records = UserController.Users();
+            for (int i=0; i<records.Count; i++)
             {
                 allUsers_table.Items.Add(new columnName()
                 {
-                    name = records[i][1] + " " + records[i][2],
-                    card = records[i][3],
-                });
+                    name = records[i].Name + " " + records[i].Surname,
+                    card = records[i].CardNumber,
+                }); 
             }          
         }
         public MainWindow()
