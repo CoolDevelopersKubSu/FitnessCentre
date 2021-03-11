@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using FitnessCenter;
+using Test;
 
 namespace View
 {
@@ -28,13 +29,13 @@ namespace View
         }
         public void ShowUsers()
         {
-            List<string[]> records = UserController.Users();
+            List<UserModel> records = UserController.Users();
             for (int i=0; i<records.Count; i++)
             {
                 allUsers_table.Items.Add(new columnName()
                 {
-                    name = records[i][0] + " " + records[i][1],
-                    card = records[i][2],
+                    name = records[i].Name + " " + records[i].Surname,
+                    card = records[i].CardNumber,
                 }); 
             }          
         }

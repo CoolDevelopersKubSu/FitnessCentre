@@ -101,6 +101,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="User.cs" />
     <Compile Include="UserController.cs" />
     <Page Include="Add.xaml">
       <SubType>Designer</SubType>

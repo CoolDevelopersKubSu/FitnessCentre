@@ -50,7 +50,6 @@
                     <Setter Property="Background" Value="#EEEEEE"/>
                     <Setter Property="Foreground" Value="#222831" />
                     <Setter Property="FontFamily" Value="Tahoma" />
-                    <Setter Property="FontFamily" Value="Candara Light"></Setter>
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
