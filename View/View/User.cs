@@ -87,6 +87,6 @@ namespace Test
             TariffPlan = data[9];
             ExpiredTrainings = int.Parse(data[10]);
             ExpiredIndividualTrainings = data[11] != "" ? int.Parse(data[11]) : 0;
-        }
+        }   
     }
 }
