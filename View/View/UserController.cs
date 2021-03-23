@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using Test;
 
 
-namespace FitnessCenter
+namespace View
 {
     class UserController
     {
