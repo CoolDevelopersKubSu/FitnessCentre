@@ -12,20 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FitnessCenter;
-using Test;
 
 namespace View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для CurrentUser.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {           
-        public MainWindow()
+    public partial class CurrentUser : Page
+    {
+        public CurrentUser()
         {
-            InitializeComponent();
-            frame.Navigate(new HomePage());
-        }             
+            InitializeComponent();          
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
     }
 }

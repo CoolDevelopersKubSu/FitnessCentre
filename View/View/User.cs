@@ -12,12 +12,12 @@ namespace Test
         /// <summary>
         /// Имя.
         /// </summary>
-        public string Name { get; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Фамилия.
         /// </summary>
-        public string Surname { get; }
+        public string Surname { get; set; }
 
         /// <summary>
         /// Пол.
@@ -57,7 +57,7 @@ namespace Test
         /// <summary>
         /// Тип абонемента.
         /// </summary>
-        public string TariffPlan { get; }
+        public string TariffPlan { get; set; }
 
         /// <summary>
         /// Входят ли в абонемент индивидуальные занятия с тренером.
@@ -87,6 +87,11 @@ namespace Test
             TariffPlan = data[9];
             ExpiredTrainings = int.Parse(data[10]);
             ExpiredIndividualTrainings = data[11] != "" ? int.Parse(data[11]) : 0;
-        }   
+        }
+        
+        public UserModel()
+        {
+
+        }
     }
 }

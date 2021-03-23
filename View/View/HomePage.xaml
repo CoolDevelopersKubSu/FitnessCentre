@@ -1,0 +1,52 @@
+﻿<Page x:Class="View.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:View"
+      mc:Ignorable="d" 
+      d:DesignHeight="463" d:DesignWidth="892"
+      Title="HomePage">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="#FFEEEEEE"></Setter>
+            <Setter Property="BorderBrush" Value="#FF393E46"></Setter>
+            <Setter Property="Background" Value="#FF393E46"></Setter>
+            <Setter Property="FontFamily" Value="Candara Light"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <DataGrid x:Name="allUsers_table" HorizontalAlignment="Left" Height="380" Margin="40,40,0,0" RowHeaderWidth="0"
+                  VerticalAlignment="Top" Width="350" BorderBrush="#393E46" FontSize="14" Opacity="0.7" 
+                  Background="#FF00ADB5" HorizontalScrollBarVisibility="Hidden" MouseDoubleClick="allUsers_table_MouseDoubleClick">
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <EventSetter Event="MouseDoubleClick" Handler="RowDoubleClick"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Effect>
+                <DropShadowEffect Color="Black" Direction="330" ShadowDepth="8" Opacity="0.4"/>
+            </DataGrid.Effect>
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#393E46"/>
+                    <Setter Property="Foreground" Value="#EEEEEE" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    <Setter Property="FontFamily" Value="Tahoma" />
+                </Style>
+                <Style BasedOn="{StaticResource {x:Type DataGridRow}}" TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="#EEEEEE"/>
+                    <Setter Property="Foreground" Value="#222831" />
+                    <Setter Property="FontFamily" Value="Tahoma" />
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=name}" ClipboardContentBinding="{x:Null}" Header="Имя" CanUserResize="False" Width="200" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=card}" ClipboardContentBinding="{x:Null}" Header="Номер карты" CanUserResize="False" Width="150" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="add" Content="ДОБАВИТЬ НОВОГО КЛИЕНТА" HorizontalAlignment="Left" 
+                Margin="464,390,0,0" VerticalAlignment="Top" Width="204" Height="30" Click="add_Click"                
+                MouseEnter="add_MouseEnter" MouseLeave="add_MouseLeave"/>
+    </Grid>
+</Page>

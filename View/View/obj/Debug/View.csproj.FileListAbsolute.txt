@@ -1,5 +1,4 @@
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View.csprojAssemblyReference.cache
-C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\Add.g.cs
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\MainWindow.g.cs
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\App.g.cs
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View_MarkupCompile.cache
@@ -73,7 +72,6 @@ C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\bin\Debug\System.Buffers.
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\bin\Debug\System.Memory.xml
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\Add.baml
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\MainWindow.baml
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View.g.resources
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View.Properties.Resources.resources
@@ -82,3 +80,9 @@ C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View.csproj.Cor
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View.exe
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\View.pdb
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\AddUserPage.g.cs
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\HomePage.g.cs
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\AddUserPage.baml
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\HomePage.baml
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\CurrentUser.g.cs
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\CurrentUser.baml
