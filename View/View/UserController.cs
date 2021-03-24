@@ -40,6 +40,7 @@ namespace View
             return data;
         }
 
+        //сделай нормальный список
         public static List<UserModel> Users()
         {
             MySqlConnection connection = DBController.GetConnection("127.0.0.1", "fitness_club", 3306, "root", "");

@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace View
 {
     /// <summary>
-    /// Логика взаимодействия для CurrentUser.xaml
+    /// Логика взаимодействия для EditUser.xaml
     /// </summary>
-    public partial class CurrentUser : Page
+    public partial class EditUser : Page
     {
-        public CurrentUser()
+        public EditUser()
         {
-            InitializeComponent();          
+            InitializeComponent();
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -30,9 +30,9 @@ namespace View
             this.NavigationService.GoBack();
         }
 
-        private void change_Click(object sender, RoutedEventArgs e)
+        private void save_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new EditUser());
+            this.NavigationService.GoBack();
         }
     }
 }

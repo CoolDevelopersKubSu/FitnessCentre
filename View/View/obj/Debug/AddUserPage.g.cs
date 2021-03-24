@@ -41,7 +41,7 @@ namespace View {
     public partial class AddUserPage : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
         
-        #line 35 "..\..\AddUserPage.xaml"
+        #line 39 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox name;
         
@@ -49,7 +49,7 @@ namespace View {
         #line hidden
         
         
-        #line 37 "..\..\AddUserPage.xaml"
+        #line 41 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox surname;
         
@@ -57,7 +57,7 @@ namespace View {
         #line hidden
         
         
-        #line 38 "..\..\AddUserPage.xaml"
+        #line 42 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox gender;
         
@@ -65,7 +65,7 @@ namespace View {
         #line hidden
         
         
-        #line 40 "..\..\AddUserPage.xaml"
+        #line 44 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DatePicker birthday;
         
@@ -73,7 +73,7 @@ namespace View {
         #line hidden
         
         
-        #line 42 "..\..\AddUserPage.xaml"
+        #line 46 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox weight;
         
@@ -81,7 +81,7 @@ namespace View {
         #line hidden
         
         
-        #line 44 "..\..\AddUserPage.xaml"
+        #line 48 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox height;
         
@@ -89,7 +89,7 @@ namespace View {
         #line hidden
         
         
-        #line 48 "..\..\AddUserPage.xaml"
+        #line 52 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox tariff_plan;
         
@@ -97,7 +97,7 @@ namespace View {
         #line hidden
         
         
-        #line 50 "..\..\AddUserPage.xaml"
+        #line 54 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox trains;
         
@@ -105,7 +105,7 @@ namespace View {
         #line hidden
         
         
-        #line 52 "..\..\AddUserPage.xaml"
+        #line 56 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox trains_ind;
         
@@ -113,7 +113,7 @@ namespace View {
         #line hidden
         
         
-        #line 53 "..\..\AddUserPage.xaml"
+        #line 57 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DatePicker date_exp;
         
@@ -121,7 +121,7 @@ namespace View {
         #line hidden
         
         
-        #line 58 "..\..\AddUserPage.xaml"
+        #line 62 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button save;
         
@@ -129,7 +129,7 @@ namespace View {
         #line hidden
         
         
-        #line 59 "..\..\AddUserPage.xaml"
+        #line 63 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button back;
         
@@ -137,7 +137,7 @@ namespace View {
         #line hidden
         
         
-        #line 62 "..\..\AddUserPage.xaml"
+        #line 66 "..\..\AddUserPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox cardnumber;
         
@@ -207,7 +207,7 @@ namespace View {
             case 11:
             this.save = ((System.Windows.Controls.Button)(target));
             
-            #line 58 "..\..\AddUserPage.xaml"
+            #line 62 "..\..\AddUserPage.xaml"
             this.save.Click += new System.Windows.RoutedEventHandler(this.save_Click);
             
             #line default
@@ -216,7 +216,7 @@ namespace View {
             case 12:
             this.back = ((System.Windows.Controls.Button)(target));
             
-            #line 59 "..\..\AddUserPage.xaml"
+            #line 63 "..\..\AddUserPage.xaml"
             this.back.Click += new System.Windows.RoutedEventHandler(this.back_Click);
             
             #line default

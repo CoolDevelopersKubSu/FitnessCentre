@@ -12,8 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FitnessCenter;
-using Test;
+using View;
 
 namespace View
 {
@@ -67,12 +66,7 @@ namespace View
         {
             
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(allUsers_table.CurrentCell.Item.ToString());
-        }
-
+        
         private void RowDoubleClick(object sender, RoutedEventArgs e)
         {
             var row = (DataGridRow)sender;
