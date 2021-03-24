@@ -12,8 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FitnessCenter;
-using Test;
+using View;
 
 namespace View
 {
@@ -29,17 +28,21 @@ namespace View
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-            UserModel user = new UserModel();
-            user.Name = name.Text;
-            user.Surname = surname.Text;
-            user.Gender = gender.Text;
-            user.BirthDate = DateTime.Parse(birthday.Text);
-            user.Weight = int.Parse(weight.Text);
-            user.Height = int.Parse(height.Text);
-            user.ExpirationDate = DateTime.Parse(date_exp.Text);
-            user.TariffPlan = tariff_plan.Text;
-            user.ExpiredTrainings = int.Parse(trains.Text);
-            user.ExpiredIndividualTrainings = int.Parse(trains_ind.Text);
+            GenderModel g = new GenderModel(gender.Text);
+            UserModel user = new UserModel(
+                name.Text,
+                surname.Text,
+                g,
+                DateTime.Parse(birthday.Text),
+                int.Parse(weight.Text),
+                int.Parse(height.Text),
+                cardnumber.Text,
+                DateTime.Parse(date_exp.Text),
+                tariff_plan.Text,
+                int.Parse(trains.Text),
+                int.Parse(trains_ind.Text)
+                );
+            
             this.NavigationService.GoBack();
         }
 
