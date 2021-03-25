@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\App.xaml
-2-253805179
+5-1630370353
 
-9-1531298027
+131172419325
 136-2045566131
-Add.xaml;MainWindow.xaml;
+AddUserPage.xaml;CurrentUser.xaml;EditUser.xaml;HomePage.xaml;MainWindow.xaml;
 
 False
 

@@ -9,14 +9,6 @@
     <Window.Background>
         <ImageBrush ImageSource="Resources/back.jpg" />
     </Window.Background>
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Foreground" Value="#FFEEEEEE"></Setter>
-            <Setter Property="BorderBrush" Value="#FF393E46"></Setter>
-            <Setter Property="Background" Value="#FF393E46"></Setter>
-            <Setter Property="FontFamily" Value="Candara Light"></Setter>
-        </Style>
-    </Window.Resources>
     <Grid>
         <Label Content="ФИТНЕС-ЦЕНТР" HorizontalAlignment="Left" 
                VerticalAlignment="Top" Height="51" Width="332" FontSize="28" Margin="54,0,0,0" 
@@ -31,35 +23,6 @@
                 <DropShadowEffect Color="#FF00ADB5" Direction="360" ShadowDepth="4" Opacity="0.4"/>
             </Label.Effect>
         </Label>
-        <Frame x:Name="frame" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="463" Margin="0,56,0,0" VerticalAlignment="Top" Width="722"/>
-
-        <DataGrid x:Name="allUsers_table" HorizontalAlignment="Left" Height="380" Margin="54,104,0,0" RowHeaderWidth="0"
-                  VerticalAlignment="Top" Width="350" BorderBrush="#393E46" FontSize="14" Opacity="0.7" 
-                  Background="#FF00ADB5" HorizontalScrollBarVisibility="Hidden">
-            <DataGrid.Effect>
-                <DropShadowEffect Color="Black" Direction="330" ShadowDepth="8" Opacity="0.4"/>
-            </DataGrid.Effect>
-            <DataGrid.Resources>
-                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="#393E46"/>
-                    <Setter Property="Foreground" Value="#EEEEEE" />
-                    <Setter Property="HorizontalContentAlignment" Value="Center" />
-                    <Setter Property="FontFamily" Value="Tahoma" />
-                </Style>
-                <Style BasedOn="{StaticResource {x:Type DataGridRow}}" TargetType="{x:Type DataGridRow}">
-                    <Setter Property="Background" Value="#EEEEEE"/>
-                    <Setter Property="Foreground" Value="#222831" />
-                    <Setter Property="FontFamily" Value="Tahoma" />
-                </Style>
-            </DataGrid.Resources>
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path=name}" ClipboardContentBinding="{x:Null}" Header="Имя" CanUserResize="False" Width="200"/>
-                <DataGridTextColumn Binding="{Binding Path=card}" ClipboardContentBinding="{x:Null}" Header="Номер карты" CanUserResize="False" Width="150"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="add" Content="ДОБАВИТЬ НОВОГО КЛИЕНТА" HorizontalAlignment="Left" 
-                Margin="464,431,0,0" VerticalAlignment="Top" Width="204" Height="30" Click="add_Click"                
-                MouseEnter="add_MouseEnter" MouseLeave="add_MouseLeave"/>
-        <Button x:Name="back" Content="НАЗАД" HorizontalAlignment="Left" Margin="757,431,0,0" VerticalAlignment="Top" Width="92" Click="back_Click" Height="30" MouseEnter="back_MouseEnter" MouseLeave="back_MouseLeave" Visibility="Hidden"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="463" Margin="0,56,0,0" VerticalAlignment="Top" Width="892"/>
     </Grid>
 </Window>

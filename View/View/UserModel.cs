@@ -4,25 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test
+namespace View
 {
     public class UserModel
     {
-
         /// <summary>
         /// Имя.
         /// </summary>
-        public string Name { get; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Фамилия.
         /// </summary>
-        public string Surname { get; }
+        public string Surname { get; set; }
 
         /// <summary>
         /// Пол.
         /// </summary>
-        public string Gender { get; set; }
+        public GenderModel Gender { get; set; }
 
         /// <summary>
         /// Дата рождения.
@@ -43,7 +42,7 @@ namespace Test
         /// Возраст.
         /// </summary>
         public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
-        
+
         /// <summary>
         /// Номер абонемента.
         /// </summary>
@@ -57,7 +56,7 @@ namespace Test
         /// <summary>
         /// Тип абонемента.
         /// </summary>
-        public string TariffPlan { get; }
+        public string TariffPlan { get; set; }
 
         /// <summary>
         /// Входят ли в абонемент индивидуальные занятия с тренером.
@@ -74,6 +73,22 @@ namespace Test
         /// </summary>
         public int ExpiredIndividualTrainings { get; set; }
 
+        public UserModel(string name, string surname, GenderModel gender, DateTime birthdate, double weight, double height, string cardNumber, DateTime expirationDate, string tariffPlan, int expiredTrainings, int expiredIndividualTrainings)
+        {
+            Name = name;
+            Surname = surname;
+            Gender = gender;
+            BirthDate = birthdate;
+            Weight = weight;
+            Height = height;
+            CardNumber = cardNumber;
+            ExpirationDate = expirationDate;
+            TariffPlan = tariffPlan;
+            ExpiredTrainings = expiredTrainings;
+            ExpiredIndividualTrainings = expiredIndividualTrainings;
+        }
+
+        /*
         public UserModel(string[] data)
         {
             Name = data[1];
@@ -87,6 +102,6 @@ namespace Test
             TariffPlan = data[9];
             ExpiredTrainings = int.Parse(data[10]);
             ExpiredIndividualTrainings = data[11] != "" ? int.Parse(data[11]) : 0;
-        }
+        }   */
     }
 }

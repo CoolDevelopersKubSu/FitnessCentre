@@ -12,8 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using FitnessCenter;
-using Test;
 
 namespace View
 {
@@ -21,75 +19,11 @@ namespace View
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {    
-        public class columnName
-        {
-            public string name { get; set; }
-            public string card { get; set; }
-        }
-        public void ShowUsers()
-        {
-            List<UserModel> records = UserController.Users();
-            for (int i=0; i<records.Count; i++)
-            {
-                allUsers_table.Items.Add(new columnName()
-                {
-                    name = records[i].Name + " " + records[i].Surname,
-                    card = records[i].CardNumber,
-                }); 
-            }          
-        }
+    {           
         public MainWindow()
         {
             InitializeComponent();
-            ShowUsers();
-        }
-
-        private void add_Click(object sender, RoutedEventArgs e)
-        {
-            frame.Visibility = Visibility.Visible;
-            allUsers_table.Visibility = Visibility.Hidden;
-            allUsers_table.IsEnabled = false;
-            add.Visibility = Visibility.Hidden;
-            add.IsEnabled = false;
-            back.Visibility = Visibility.Visible;
-            frame.Navigate(new Add());
-        }
-
-        private void back_Click(object sender, RoutedEventArgs e)
-        {          
-            frame.Visibility = Visibility.Hidden;
-            allUsers_table.Visibility = Visibility.Visible;
-            allUsers_table.IsEnabled = true;
-            add.Visibility = Visibility.Visible;
-            add.IsEnabled = true;
-            back.Visibility = Visibility.Hidden;          
-        }
-
-        private void add_MouseEnter(object sender, MouseEventArgs e)
-        {
-            var bc = new BrushConverter();
-            add.Foreground = (Brush)bc.ConvertFrom("#222831");
-        }
-
-        private void add_MouseLeave(object sender, MouseEventArgs e)
-        {
-            var bc = new BrushConverter();
-            add.Foreground = (Brush)bc.ConvertFrom("#FFEEEEEE");
-            add.Background = (Brush)bc.ConvertFrom("#222831");
-        }
-
-        private void back_MouseEnter(object sender, MouseEventArgs e)
-        {
-            var bc = new BrushConverter();
-            add.Foreground = (Brush)bc.ConvertFrom("#222831");
-        }
-
-        private void back_MouseLeave(object sender, MouseEventArgs e)
-        {
-            var bc = new BrushConverter();
-            add.Foreground = (Brush)bc.ConvertFrom("#FFEEEEEE");
-            add.Background = (Brush)bc.ConvertFrom("#222831");
-        }
+            frame.Navigate(new HomePage());
+        }             
     }
 }
