@@ -11,7 +11,7 @@ namespace View
         /// <summary>
         /// Название пола.
         /// </summary>
-        public string Name { get; }
+        public string Name { get;}
         /// <summary>
         /// Создать новый пол.
         /// </summary>

@@ -8,6 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/back.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/bouncycastle.crypto.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/google.protobuf.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/google.protobuf.pdb")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/k4os.compression.lz4.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/k4os.compression.lz4.streams.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/k4os.hash.xxhash.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/mysql.data.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/renci.sshnet.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/system.buffers.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/system.memory.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/system.numerics.vectors.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/system.runtime.compilerservices.unsafe.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/ubiety.dns.core.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/view.exe")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/view.pdb")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bin/debug/zstandard.net.dll")]
 
 

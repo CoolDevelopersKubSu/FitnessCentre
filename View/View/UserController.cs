@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace View
 {
@@ -17,7 +17,6 @@ namespace View
             MySqlDataReader reader = command.ExecuteReader();
 
             List<string[]> data = new List<string[]>();
-
             while (reader.Read())
             {
                 data.Add(new string[12]);
@@ -43,16 +42,8 @@ namespace View
         //сделай нормальный список
         public static List<UserModel> Users()
         {
-            MySqlConnection connection = DBController.GetConnection("127.0.0.1", "fitness_club", 3306, "root", "");
-            string sql = DBController.GetRequest("select all");
-            List<string[]> users = RunRequests(sql, connection);
-            List<UserModel> listUsers = new List<UserModel>();
-            for (int i = 0; i < users.Count; i++)
-            {
-                UserModel user = new UserModel(users[i]);
-                listUsers.Add(user);
-            }
-            return listUsers;            
+            DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");
+            return newRequest.Users;            
         }
     }
 }
