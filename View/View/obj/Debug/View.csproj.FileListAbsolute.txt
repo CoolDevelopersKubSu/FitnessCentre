@@ -86,3 +86,5 @@ C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\AddUserPage.bam
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\HomePage.baml
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\CurrentUser.g.cs
 C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\CurrentUser.baml
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\EditUser.g.cs
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\EditUser.baml

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Илья\Documents\GitHub\FitnessCentre\View\View\obj\Debug\
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\obj\Debug\
 View
 none
 false
 DEBUG;TRACE
-C:\Users\Илья\Documents\GitHub\FitnessCentre\View\View\App.xaml
-4-1309028813
+C:\Users\Asus\Documents\GitHub\FitnessCentre\View\View\App.xaml
+5-1630370353
 
-13-59706114
-136-1886934891
-AddUserPage.xaml;CurrentUser.xaml;HomePage.xaml;MainWindow.xaml;
+131172419325
+136-2045566131
+AddUserPage.xaml;CurrentUser.xaml;EditUser.xaml;HomePage.xaml;MainWindow.xaml;
 
-True
+False
 

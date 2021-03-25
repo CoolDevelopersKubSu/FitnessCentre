@@ -38,8 +38,7 @@ namespace View
             connection.Close();
             return data;
         }
-
-        //сделай нормальный список
+      
         public static List<UserModel> Users()
         {
             DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");

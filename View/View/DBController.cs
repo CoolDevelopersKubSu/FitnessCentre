@@ -59,6 +59,8 @@ namespace View
                     {
                         while (user_reader.Read())
                         {
+                            int expiredIndividualTrainings = 0;
+                            int expiredTrainings = 0;
                             string name = user_reader.GetString(1);
                             string surname = user_reader.GetString(2);
                             DateTime birthdate = user_reader.GetDateTime(4);
@@ -67,9 +69,11 @@ namespace View
                             string cardNumber = user_reader.GetString(7);
                             DateTime expirationDate = user_reader.GetDateTime(8);
                             string tariffPlan = user_reader.GetString(9);
-                            int expiredTrainings = user_reader.GetInt32(10);
-                            int expiredIndividualTrainings = user_reader.GetInt32(11);
-
+                            if (user_reader.GetValue(11) != DBNull.Value)
+                                expiredTrainings = user_reader.GetInt32(10);
+                            if (user_reader.GetValue(11) != DBNull.Value)                            
+                                expiredIndividualTrainings = user_reader.GetInt32(11);
+                                                                                                            
                             users.Add(new UserModel(
                                 name,
                                 surname,
