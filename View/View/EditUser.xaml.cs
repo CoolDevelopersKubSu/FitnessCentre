@@ -23,13 +23,14 @@ namespace View
         private string card;
         public EditUser(UserModel user)
         {           
-            InitializeComponent();
+            InitializeComponent();           
             List<GenderModel> genders = UserController.GetGenders();
             for (int i = 0; i < genders.Count; i++)
             {
                 gender.Items.Add(genders[i].Name);
             }
             card = user.CardNumber;
+            header.Text = "КАРТОЧКА КЛИЕНТА " + card;
             name.Text = user.Name;
             surname.Text = user.Surname;
             gender.Text = user.Gender.Name;

@@ -23,43 +23,44 @@
         </Style>
         <Style TargetType="DatePicker">
             <Setter Property="BorderBrush" Value="#00ADB5"></Setter>
-
+            <Setter Property="FontFamily" Value="Book Antiqua"></Setter>
         </Style>
         <Style TargetType="TextBox">
             <Setter Property="BorderBrush" Value="#00ADB5"></Setter>
+            <Setter Property="FontFamily" Value="Book Antiqua"></Setter>
         </Style>
     </Page.Resources>
     <Grid>
-        <Canvas HorizontalAlignment="Left" Height="264" Background="#EEEEEE" Margin="61,97,0,0" VerticalAlignment="Top" Width="583">
+        <Canvas HorizontalAlignment="Left" Height="252" Background="#EEEEEE" Margin="75,84,0,0" VerticalAlignment="Top" Width="606">
             <Label Content="Имя:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="8" Canvas.Top="23"/>
             <TextBox x:Name="name" Height="23" Canvas.Left="48" TextWrapping="Wrap" Canvas.Top="25" Width="120"/>
             <Label Content="Фамилия:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="70"/>
             <TextBox x:Name="surname" Height="23" Canvas.Left="78" TextWrapping="Wrap" Canvas.Top="70" Width="120"/>
-            <ComboBox x:Name="gender" IsEditable="True" Canvas.Left="48" Canvas.Top="118" Width="120"/>
+            <ComboBox x:Name="gender" FontFamily="Book Antiqua" IsEditable="True" Canvas.Left="48" Canvas.Top="118" Width="120"/>
             <Label Content="Пол:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="115"/>
             <DatePicker Name="birthday" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="108" Canvas.Top="162" Width="147" Background="{x:Null}" IsTodayHighlighted="True" SelectedDateFormat="Short"/>
             <Label Content="Дата рождения:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="161" RenderTransformOrigin="0.424,-0.84"/>
             <TextBox x:Name="weight" Height="23" Canvas.Left="47" TextWrapping="Wrap" Canvas.Top="211" Width="120"/>
             <Label Content="Вес:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="209"/>
-            <TextBox x:Name="height" Height="23" Canvas.Left="424" TextWrapping="Wrap" Canvas.Top="25" Width="120"/>
-            <Label Content="Рост:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="367" Canvas.Top="23"/>
-            <Label Content="Дата истечения абонемента:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="262" Canvas.Top="70"/>
-            <Label Content="Тарифный план:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="327" Canvas.Top="115"/>
-            <TextBox x:Name="tariff_plan" Height="23" Canvas.Left="424" TextWrapping="Wrap" Canvas.Top="117" Width="120"/>
-            <Label Content="Количество тренировок:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="281" Canvas.Top="161"/>
-            <TextBox x:Name="trains" Height="23" Canvas.Left="424" TextWrapping="Wrap" Canvas.Top="163" Width="120"/>
-            <Label Content="Количество тренировок с тренером:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="220" Canvas.Top="209"/>
-            <TextBox x:Name="trains_ind" Height="23" Canvas.Left="424" TextWrapping="Wrap" Canvas.Top="211" Width="120"/>
-            <DatePicker x:Name="date_exp" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="424" Canvas.Top="69" Width="147" Background="{x:Null}" IsTodayHighlighted="True" SelectedDateFormat="Short"/>
+            <TextBox x:Name="height" Height="23" Canvas.Left="323" TextWrapping="Wrap" Canvas.Top="25" Width="120"/>
+            <Label Content="Рост:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="281" Canvas.Top="25"/>
+            <Label Content="Дата истечения абонемента:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="281" Canvas.Top="71"/>
+            <Label Content="Тарифный план:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="281" Canvas.Top="117"/>
+            <TextBox x:Name="tariff_plan" Height="23" Canvas.Left="378" TextWrapping="Wrap" Canvas.Top="118" Width="120"/>
+            <Label Content="Количество тренировок(без тренера):" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="281" Canvas.Top="161"/>
+            <TextBox x:Name="trains" Height="23" Canvas.Left="495" TextWrapping="Wrap" Canvas.Top="163" Width="101"/>
+            <Label Content="Количество тренировок с тренером:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="281" Canvas.Top="207"/>
+            <TextBox x:Name="trains_ind" Height="23" Canvas.Left="485" TextWrapping="Wrap" Canvas.Top="209" Width="101"/>
+            <DatePicker x:Name="date_exp" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="443" Canvas.Top="71" Width="146" Background="{x:Null}" IsTodayHighlighted="True" SelectedDateFormat="Short"/>
         </Canvas>
         <Label FontFamily="Yu Gothic Medium" Foreground="#EEEEEE" FontWeight="ExtraBlack" HorizontalAlignment="Left" Margin="88,23,0,0" VerticalAlignment="Top">
             <TextBlock TextDecorations="Underline">ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЯ</TextBlock>
         </Label>
         <Button x:Name="save" Content="СОХРАНИТЬ" Width="100" Height="30" Click="save_Click" Margin="506,384,286,49" Grid.ColumnSpan="2"/>
         <Button x:Name="back" Content="ОТМЕНА" Width="100" Height="30" Click="back_Click" Margin="671,384,121,49"/>
-        <Canvas HorizontalAlignment="Left" Height="39" Background="#EEEEEE" Margin="61,58,0,0" VerticalAlignment="Top" Width="583">
-            <Label Content="Номер карты:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="10"/>
-            <TextBox x:Name="cardnumber" Height="23" Canvas.Left="96" TextWrapping="Wrap" Canvas.Top="10" Width="120"/>
+        <Canvas HorizontalAlignment="Left" Height="39" Background="#EEEEEE" Margin="75,58,0,0" VerticalAlignment="Top" Width="606">
+            <Label Content="Номер карты:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="8" Canvas.Top="10" Width="81"/>
+            <TextBox x:Name="cardnumber" Height="23" Canvas.Left="94" TextWrapping="Wrap" Canvas.Top="10" Width="120"/>
         </Canvas>
     </Grid>
 </Page>

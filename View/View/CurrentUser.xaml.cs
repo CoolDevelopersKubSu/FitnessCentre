@@ -25,6 +25,7 @@ namespace View
         public CurrentUser(string cardNumber)
         {         
             InitializeComponent();
+            header.Text = "КАРТОЧКА КЛИЕНТА " + cardNumber;
             user = UserController.GetUserByCardNumber(cardNumber);
             name.Content = user.Name;
             surname.Content = user.Surname;
@@ -51,8 +52,13 @@ namespace View
 
         private void delete_Click(object sender, RoutedEventArgs e)
         {
-            UserController.DeleteUser(user.CardNumber);
-            this.NavigationService.Navigate(new HomePage());
+            var result = MessageBox.Show("Вы уверены, что хотите удалить клиента?", "",  MessageBoxButton.YesNo,
+            MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                UserController.DeleteUser(user.CardNumber);
+                this.NavigationService.Navigate(new HomePage());
+            }
         }
     }
 }
