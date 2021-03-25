@@ -20,19 +20,52 @@ namespace View
     /// </summary>
     public partial class EditUser : Page
     {
-        public EditUser()
-        {
+        private string card;
+        public EditUser(UserModel user)
+        {           
             InitializeComponent();
+            List<GenderModel> genders = UserController.GetGenders();
+            for (int i = 0; i < genders.Count; i++)
+            {
+                gender.Items.Add(genders[i].Name);
+            }
+            card = user.CardNumber;
+            name.Text = user.Name;
+            surname.Text = user.Surname;
+            gender.Text = user.Gender.Name;
+            birthday.Text = user.BirthDate.ToString("dd.MM.yyyy");
+            weight.Text = user.Weight.ToString();
+            height.Text = user.Height.ToString();
+            date_exp.Text = user.ExpirationDate.ToString("dd.MM.yyyy");
+            tariff_plan.Text = user.TariffPlan;
+            trains.Text = user.ExpiredTrainings.ToString();
+            trains_ind.Text = user.ExpiredIndividualTrainings.ToString();
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.GoBack();
+            this.NavigationService.Navigate(new CurrentUser(card));
         }
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.GoBack();
+            GenderModel g = new GenderModel(gender.Text);
+            UserModel user = new UserModel(
+                name.Text,
+                surname.Text,
+                g,
+                DateTime.Parse(birthday.Text),
+                int.Parse(weight.Text),
+                int.Parse(height.Text),
+                card,
+                DateTime.Parse(date_exp.Text),
+                tariff_plan.Text,
+                int.Parse(trains.Text),
+                int.Parse(trains_ind.Text)
+                );
+
+            UserController.UpdateUser(user);
+            this.NavigationService.Navigate(new CurrentUser(card));
         }
     }
 }

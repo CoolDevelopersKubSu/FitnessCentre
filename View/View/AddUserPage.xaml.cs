@@ -21,10 +21,16 @@ namespace View
     /// </summary>
     public partial class AddUserPage : Page
     {
+        public DataGrid tableUser { get; set; }
         public AddUserPage()
         {
             InitializeComponent();
-        }
+            List<GenderModel> genders = UserController.GetGenders();
+            for (int i = 0; i < genders.Count; i++)
+            {
+                gender.Items.Add(genders[i].Name);
+            }
+        }        
 
         private void save_Click(object sender, RoutedEventArgs e)
         {
@@ -42,13 +48,14 @@ namespace View
                 int.Parse(trains.Text),
                 int.Parse(trains_ind.Text)
                 );
-            
-            this.NavigationService.GoBack();
+
+            UserController.AddNewUser(user);              
+            this.NavigationService.Navigate(new HomePage());          
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.GoBack();
+            this.NavigationService.Navigate(new HomePage());
         }
     }
 }

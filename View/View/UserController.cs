@@ -14,34 +14,40 @@ namespace View
         /// Возвращает всех пользователя
         /// </summary>
         /// <returns></returns>
-        public List<UserModel> Users()
+        public static List<UserModel> Users()
         {
             DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");
             return newRequest.Users;
         }
 
-        public void AddNewUser(UserModel user)
+        public static void AddNewUser(UserModel user)
         {
             DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");
             newRequest.AddNewUser(user);
         }
 
-        public void DeleteUser(string userCardNumber)
+        public static void DeleteUser(string userCardNumber)
         {
             DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");
             newRequest.DeleteUser(userCardNumber);
         }
 
-        public void UpdateUser(UserModel user)
+        public static void UpdateUser(UserModel user)
         {
             DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");
             newRequest.UpdateUser(user);
         }
 
-        public void GetUserByCardNumber(string userCardNumber)
+        public static UserModel GetUserByCardNumber(string userCardNumber)
         {
             DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");
-            newRequest.GetUserByCardNumber(userCardNumber);
+            return newRequest.GetUserByCardNumber(userCardNumber);            
+        }
+
+        public static List<GenderModel> GetGenders()
+        {
+            DBController newRequest = new DBController("127.0.0.1", "fitness_club", 3306, "root", "");
+            return newRequest.Genders;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace View
             public string card { get; set; }
         }
         public void ShowUsers()
-        {
+        {            
             List<UserModel> records = UserController.Users();
             for (int i = 0; i < records.Count; i++)
             {
@@ -69,8 +69,10 @@ namespace View
         
         private void RowDoubleClick(object sender, RoutedEventArgs e)
         {
-            var row = (DataGridRow)sender;
-            this.NavigationService.Navigate(new CurrentUser());
+            var row = (DataGridRow)sender;          
+            TextBlock card = allUsers_table.Columns[1].GetCellContent(row) as TextBlock;
+            string cardNum = card.Text;                     
+            this.NavigationService.Navigate(new CurrentUser(cardNum));
         }
     }
 }
