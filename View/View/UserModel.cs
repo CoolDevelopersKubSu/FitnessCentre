@@ -8,7 +8,6 @@ namespace View
 {
     public class UserModel
     {
-
         /// <summary>
         /// Имя.
         /// </summary>
@@ -43,7 +42,7 @@ namespace View
         /// Возраст.
         /// </summary>
         public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
-        
+
         /// <summary>
         /// Номер абонемента.
         /// </summary>
@@ -88,7 +87,7 @@ namespace View
             ExpiredTrainings = expiredTrainings;
             ExpiredIndividualTrainings = expiredIndividualTrainings;
         }
-        
+
         /*
         public UserModel(string[] data)
         {
