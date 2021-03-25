@@ -39,13 +39,13 @@ namespace View
             {
                 connection.Open();
 
-                MySqlCommand select_genders = new MySqlCommand("SELECT gender FROM clients", connection);
+                MySqlCommand select_genders = new MySqlCommand("SELECT distinct gender FROM clients", connection);
 
                 using (MySqlDataReader gender_reader = select_genders.ExecuteReader())
                 {
                     while (gender_reader.Read())
-                    {
-                        GenderModel gender = new GenderModel(gender_reader.GetString(0));
+                    {                        
+                        GenderModel gender = new GenderModel(gender_reader.GetString(0));                        
                         genders.Add(gender);
                     }
                 }
