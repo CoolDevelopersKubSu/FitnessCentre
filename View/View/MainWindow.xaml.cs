@@ -22,7 +22,7 @@ namespace View
     {           
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
             frame.Navigate(new HomePage());
         }             
     }

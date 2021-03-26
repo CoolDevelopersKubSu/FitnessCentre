@@ -15,18 +15,19 @@ using System.Windows.Shapes;
 using View;
 
 namespace View
-{
+{    
     /// <summary>
     /// Логика взаимодействия для CurrentUser.xaml
     /// </summary>
     public partial class CurrentUser : Page
     {
+        private UserController controller = new UserController();
         private UserModel user;
         public CurrentUser(string cardNumber)
         {         
             InitializeComponent();
             header.Text = "КАРТОЧКА КЛИЕНТА " + cardNumber;
-            user = UserController.GetUserByCardNumber(cardNumber);
+            user = controller.GetUserByCardNumber(cardNumber);
             name.Content = user.Name;
             surname.Content = user.Surname;
             gender.Content = user.Gender.Name;
@@ -56,7 +57,7 @@ namespace View
             MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
-                UserController.DeleteUser(user.CardNumber);
+                controller.DeleteUser(user.CardNumber);
                 this.NavigationService.Navigate(new HomePage());
             }
         }

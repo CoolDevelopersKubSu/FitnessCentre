@@ -20,11 +20,12 @@ namespace View
     /// </summary>
     public partial class EditUser : Page
     {
+        private UserController controller = new UserController();
         private string card;
         public EditUser(UserModel user)
         {           
             InitializeComponent();           
-            List<GenderModel> genders = UserController.GetGenders();
+            List<GenderModel> genders = controller.GetGenders();
             for (int i = 0; i < genders.Count; i++)
             {
                 gender.Items.Add(genders[i].Name);
@@ -65,7 +66,7 @@ namespace View
                 int.Parse(trains_ind.Text)
                 );
 
-            UserController.UpdateUser(user);
+            controller.UpdateUser(user);
             this.NavigationService.Navigate(new CurrentUser(card));
         }
     }

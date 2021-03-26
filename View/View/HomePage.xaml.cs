@@ -21,6 +21,7 @@ namespace View
     /// </summary>
     public partial class HomePage : Page
     {
+        private UserController controller = new UserController();
         public class columnName
         {
             public string name { get; set; }
@@ -28,7 +29,7 @@ namespace View
         }
         public void ShowUsers()
         {            
-            List<UserModel> records = UserController.Users();
+            List<UserModel> records = controller.Users();
             for (int i = 0; i < records.Count; i++)
             {
                 allUsers_table.Items.Add(new columnName()
